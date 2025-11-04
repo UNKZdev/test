@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresa Verde</title>
+    <link rel="stylesheet" href="Ecologico.css">
+
+    <!-- Fontes Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <section>
+            <a href="#" class="logo">
+                <img width="60" height="50" src="logo.png" alt="Logo">
+            </a>
+
+            <nav class="navbar">
+                <a href="#home">Home</a>
+                <a href="#about">Sobre</a>
+                <a href="#ecology">Economia sustentável</a>
+                <a href="#calculate">Calculadora</a>
+                <a href="#ref">Referências</a>
+            </nav>
+
+            <div class="icons">
+                <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/search--v1.png" alt="search--v1" />
+                <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/environment-care.png" alt="environment-care" />
+                <img width="50" height="50" src="https://img.icons8.com/ios/50/hand-planting.png" alt="hand-planting" />
+            </div>
+        </section>
+    </header>
+
+<div class="home-container">
+  <section id="home">
+    <div class="content">
+      <h3>A WORLD MORE <span class="green">G</span>REEN</h3>
+      <p>CALCULE A POLUIÇÃO DO SEU DIA A DIA, VEJA O RESULTADO, ANALISE E MELHORE SEUS HÁBITOS!</p>
+      <a href="#calculate" class="btn">Calcule agora</a>
+    </div>
+  </section>
+</div> <!-- fecha o home-container aqui! -->
+
+<section class="about" id="about">
+  <h2 class="title">Sobre</h2>
+  <div class="row">
+    <div class="content">
+      <h3>Por qual motivo pensar na <span class="h2-green">economia sustentável</span>?</h3>
+      <p>Pensar na economia sustentável é fundamental para promover um desenvolvimento que equilibre o crescimento econômico com a preservação ambiental e o bem-estar social. Essa abordagem busca reduzir o desperdício de recursos, incentivar o uso de tecnologias limpas e estimular práticas de consumo e produção responsáveis. Além disso, contribui para garantir a qualidade de vida das gerações atuais e futuras, fortalecendo o compromisso coletivo com um futuro mais equilibrado e consciente.</p>
+    </div>
+    <div class="container-image">
+      <img src="img/IMAGEABOUT.png" alt="Sobre">
+    </div>
+  </div>
+</section>
+
+<section class="calculate" id="calculate">
+  <h2 class="title">Calculadora Ecológica</h2>
+
+  <form id="ecoForm" onsubmit="event.preventDefault(); calcularImpacto();">
+    <div class="grid-questions">
+
+      <div class="question">
+        <label for="transporte">Qual é seu principal meio de locomoção?</label>
+        <select id="transporte">
+          <option value="carro">Carro (pessoal)</option>
+          <option value="moto">Moto</option>
+          <option value="onibus">Ônibus</option>
+          <option value="trem">Trem/Metro</option>
+          <option value="bicicleta">Bicicleta</option>
+          <option value="a-pe">A pé</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label for="energia">Você costuma deixar luzes ou aparelhos ligados sem necessidade?</label>
+        <select id="energia">
+          <option value="sim">Sim, frequentemente</option>
+          <option value="as-vezes">Às vezes</option>
+          <option value="nao">Quase nunca</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label for="alimentacao">Frequência de consumo de carne vermelha</label>
+        <select id="alimentacao">
+          <option value="diariamente">Diariamente</option>
+          <option value="algumas-vezes">Algumas vezes por semana</option>
+          <option value="raramente">Raramente</option>
+          <option value="nunca">Nunca</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label for="reciclagem">Você recicla o lixo da sua casa?</label>
+        <select id="reciclagem">
+          <option value="sempre">Sempre</option>
+          <option value="as-vezes">Às vezes</option>
+          <option value="nunca">Nunca</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label for="descartaveis">Uso de produtos descartáveis (copos, talheres, pratos)</label>
+        <select id="descartaveis">
+          <option value="sempre">Sempre</option>
+          <option value="as-vezes">Às vezes</option>
+          <option value="nunca">Nunca</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label for="banho">Tempo médio do seu banho</label>
+        <select id="banho">
+          <option value="menos-5">Menos de 5 min</option>
+          <option value="5-10">5 - 10 min</option>
+          <option value="10-15">10 - 15 min</option>
+          <option value="mais-15">Mais de 15 min</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label for="agua">Como você descreve seu uso de água (torneira, mangueira, lavagem)?</label>
+        <select id="agua">
+          <option value="econômico">Econômico / consciente</option>
+          <option value="moderado">Moderado</option>
+          <option value="desperdico">Desperdício ocasional</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label for="compras">Com que frequência você compra coisas novas (consumo geral)?</label>
+        <select id="compras">
+          <option value="frequente">Frequentemente (semanal)</option>
+          <option value="ocasional">Ocasionalmente (mensal)</option>
+          <option value="raramente">Raramente</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label for="ar-cond">Uso de ar-condicionado em casa</label>
+        <select id="ar-cond">
+          <option value="diario">Diário (muitas horas)</option>
+          <option value="as-vezes">Às vezes</option>
+          <option value="nunca">Quase nunca</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label for="eletronicos">Tempo diário médio usando eletrônicos ligados (PCs, TVs) quando não em uso ativo</label>
+        <select id="eletronicos">
+          <option value="muito">Muitas horas (vários aparelhos sempre ligados)</option>
+          <option value="moderado">Horas moderadas</option>
+          <option value="pouco">Pouco</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label for="roupas">Frequência de compra de roupas (fast fashion)</label>
+        <select id="roupas">
+          <option value="mensal">Mensal</option>
+          <option value="trimestral">Trimestral</option>
+          <option value="anual">Anual / raramente</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <label for="residuos">Quantidade de restos de comida que você descarta por semana</label>
+        <select id="residuos">
+          <option value="muito-desperdicio">Muito desperdício</option>
+          <option value="moderado">Moderado</option>
+          <option value="pouco">Pouco / compostado</option>
+        </select>
+      </div>
+
+    </div> <!-- /grid-questions -->
+
+    <div class="form-actions">
+      <button type="submit" class="btn">Calcular Impacto</button>
+      <button type="button" class="btn secondary" onclick="document.getElementById('ecoForm').reset(); document.getElementById('resultado').innerHTML='';">Resetar</button>
+    </div>
+  </form>
+
+  <div id="resultado" class="resultado"></div>
+</section>
+
+
+<!-- AGORA SIM, DEPOIS DO SOBRE, vem o de referências -->
+<section class="ref" id="ref">
+  <h2 class="title">Referências</h2>
+  <div class="ref-container">
+    <ul>
+      <li><a href="https://www.gov.br/ibama" target="_blank">IBAMA – Instituto Brasileiro do Meio Ambiente</a></li>
+      <li><a href="https://www.un.org/sustainabledevelopment/" target="_blank">ONU – Objetivos de Desenvolvimento Sustentável</a></li>
+      <li><a href="https://www.greenpeace.org/brasil/" target="_blank">Greenpeace Brasil</a></li>
+      <li><a href="https://www.wwf.org.br/" target="_blank">WWF Brasil</a></li>
+      <li><a href="https://www.mma.gov.br/" target="_blank">Ministério do Meio Ambiente e Mudança do Clima</a></li>
+    </ul>
+  </div>
+</section>
+
+<script src="Ecologico.js"></script>
+
+
+</body>
+</html>
